@@ -1,85 +1,91 @@
 import styled from "@emotion/styled";
 
 export const Card = styled.div`
-  display: grid;
-  grid-gap: 2rem;
-  margin-bottom: 4rem;
-  grid-template-columns: 1fr;
-  padding-bottom: 2rem;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 0;
-    padding-bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 `;
 
-export const CardLeft = styled.div`
-  justify-self: center;
-  height: 100%;
+export const ImageWrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
+
   img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 `;
 
-export const CardRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const CardContent = styled.div`
+  padding: 1.5rem;
 
   h4 {
     font-size: 1.5rem;
-    font-weight: 400;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   p {
-    font-weight: 400;
-    max-width: 95%;
-    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
     margin-bottom: 1rem;
-    color: rgba(0, 0, 0, 0.815);
     text-align: center;
-
-    @media (min-width: 992px) {
-      text-align: start;
-    }
   }
-  @media (min-width: 992px) {
-    align-items: flex-start;
-    margin-top: 1rem;
-  }
-`;
-
-export const BtnGroup = styled.div`
-  height: 70px;
-  display: flex;
-  align-items: center;
 `;
 
 export const TechCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media (min-width: 992px) {
-    justify-content: flex-start;
-  }
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const TechCard = styled.div`
+  padding: 0.5rem 1rem;
+  background: #f4f4f4;
   border-radius: 10px;
-  background-color: #f5f5f5;
-  padding: 5px 10px;
-  margin: 5px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+`;
+
+export const BtnGroup = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 15px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.815);
-  cursor: default;
-  box-shadow: 0px 2px 5px rgba(160, 170, 180, 0.6);
+  gap: 1rem;
+
+  a {
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &.PrimaryBtn {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    &.SecondaryBtn {
+      background: #e8e8e8;
+      color: #333;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 `;

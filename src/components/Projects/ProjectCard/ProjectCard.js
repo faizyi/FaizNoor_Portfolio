@@ -1,58 +1,64 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import { ProjectList } from "../../../data/ProjectData";
 import {
   Card,
-  CardLeft,
-  CardRight,
+  ImageWrapper,
+  CardContent,
   TechCardContainer,
   TechCard,
   BtnGroup,
 } from "./ProjectCardElements";
-import ScrollAnimation from "react-animate-on-scroll";
+
 function ProjectCard() {
   return (
-    <>
+    <div className="ProjectsGrid">
       {ProjectList.map((list, index) => (
-        <ScrollAnimation animateIn="fadeInLeft" key={index}>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          // animateOnce={true}
+          // delay={index * 100}
+          // key={index}
+        >
           <Card>
-            <CardLeft>
+            <ImageWrapper>
               <img src={list.img} alt={list.name} />
-            </CardLeft>
-            <CardRight>
+            </ImageWrapper>
+            <CardContent>
               <h4>{list.title}</h4>
               <p>{list.description}</p>
               <TechCardContainer>
-                {list.tech_stack.map((tech, index) => (
-                  <TechCard key={index}>{tech}</TechCard>
+                {list.tech_stack.map((tech, idx) => (
+                  <TechCard key={idx}>{tech}</TechCard>
                 ))}
               </TechCardContainer>
               <BtnGroup>
                 {list.github_url.length > 0 && (
                   <a
-                    className="btn SecondaryBtn btn-shadow"
+                    className="btn SecondaryBtn"
                     href={list.github_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Github
+                    View Code
                   </a>
                 )}
                 {list.demo_url.length > 0 && (
                   <a
-                    className="btn PrimaryBtn btn-shadow"
+                    className="btn PrimaryBtn"
                     href={list.demo_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Demo ➜
+                    Live Demo
                   </a>
                 )}
               </BtnGroup>
-            </CardRight>
+            </CardContent>
           </Card>
         </ScrollAnimation>
       ))}
-    </>
+    </div>
   );
 }
 

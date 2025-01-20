@@ -159,6 +159,29 @@ video {
   margin-top: -1rem;
 }
 
+.ProjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.SectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.SectionSubtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+
 
 
 /* ------------------------------------ Media for Container */
