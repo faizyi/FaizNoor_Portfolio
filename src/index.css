@@ -163,7 +163,7 @@ video {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   background: #f9f9f9;
 }
 

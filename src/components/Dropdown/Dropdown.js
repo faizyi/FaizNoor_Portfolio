@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
@@ -8,7 +8,6 @@ const SiderBar = styled.div`
   position: fixed;
   height: 100%;
   width: 100%;
-  /* top: 0; */
   left: 0;
   z-index: 999;
   transition: 0.3s ease-in-out;
@@ -28,6 +27,7 @@ const CloseIcon = styled(FaTimes)`
   top: 2rem;
   cursor: pointer;
 `;
+
 export const NavMenu = styled.div`
   display: flex;
   justify-content: center;
@@ -57,33 +57,35 @@ export const NavBtn = styled.div`
 `;
 
 function Dropdown({ isOpen, toggle }) {
+  // Use effect to manage the scroll behavior
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = ""; // Enable scrolling
+    }
+
+    // Cleanup to reset overflow style when the component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <SiderBar isOpen={isOpen} onClick={toggle}>
       <CloseIcon onClick={toggle} />
       <NavMenu>
-        <NavLink
-          onClick={toggle}
-          className="menu-item"
-          to="projects"
-        >
+        <NavLink onClick={toggle} className="menu-item" to="projects">
           Projects
         </NavLink>
-        <NavLink
-          onClick={toggle}
-          className="menu-item"
-          to="about"
-        >
+        <NavLink onClick={toggle} className="menu-item" to="about">
           About
         </NavLink>
-        <NavLink
-          onClick={toggle}
-          className="menu-item"
-          to="contact"
-        >
+        <NavLink onClick={toggle} className="menu-item" to="contact">
           Contact
         </NavLink>
       </NavMenu>
-      <NavBtn onClick={toggle}>
+      <NavBtn>
         <a
           className="btn PrimaryBtn"
           href="https://linkedin.com/in/faiz-noor"

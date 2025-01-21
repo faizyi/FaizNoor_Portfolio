@@ -18,7 +18,7 @@ function ProjectCard() {
           animateIn="fadeInUp"
           // animateOnce={true}
           // delay={index * 100}
-          // key={index}
+          key={index}
         >
           <Card>
             <ImageWrapper>
