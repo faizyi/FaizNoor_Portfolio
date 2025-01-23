@@ -162,10 +162,12 @@ video {
 .ProjectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr; /* Ensures all rows maintain equal height */
   gap: 2rem;
   padding: 1rem;
   background: #f9f9f9;
 }
+
 
 .SectionTitle {
   text-align: center;

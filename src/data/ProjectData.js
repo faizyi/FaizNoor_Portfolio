@@ -4,7 +4,7 @@ export const ProjectList = [
     img: "/chat.png",
     title: "Chat",
     description:
-      "Real-time chat application with messaging functionality.",
+      "A real-time chat application with features like instant messaging, built using MERN stack technologies.",
     tech_stack: ["NextJs", "TailwindCSS", "NodeJs", "MongoDB"],
     github_url: "https://github.com/faizyi/MERN-Chat",
     demo_url: "https://mern-chat-gamma.vercel.app/",
@@ -13,16 +13,25 @@ export const ProjectList = [
     img: "/weather.png",
     title: "Weather App",
     description:
-      "A real-time weather information using the OpenWeatherMap API",
-    tech_stack: ["React",],
+      "A responsive weather application that provides real-time weather updates using the OpenWeatherMap API.",
+    tech_stack: ["React"],
     github_url: "https://github.com/faizyi/react-weather-app",
     demo_url: "https://faizyi.github.io/react-weather-app/",
+  },
+  {
+    img: "/e-commerce-1.png",
+    title: "SAK Shop",
+    description:
+      "An e-commerce platform for browsing and purchasing products, with features like a shopping cart and secure checkout.",
+    tech_stack: ["NextJs", "TailwindCSS", "NodeJs", "MongoDB"],
+    github_url: "https://github.com/faizyi/SAK-Shop-Ecommerce",
+    demo_url: "https://sak-shop-ecommerce.vercel.app/",
   },
   {
     img: "/ems.png",
     title: "Expense Manager",
     description:
-      "Track and manage your expenses with this expense manager app.",
+      "A user-friendly application to track, categorize, and manage expenses efficiently with Firebase for backend support.",
     tech_stack: ["ReactJs", "Firebase"],
     github_url: "https://github.com/faizyi/React-EMS",
     demo_url: "https://faizyi.github.io/React-EMS/",
@@ -31,7 +40,7 @@ export const ProjectList = [
     img: "/todo.png",
     title: "Todo App",
     description:
-      "A simple and interactive todo list application that lets users add, edit, and delete tasks.",
+      "An intuitive todo list app that allows users to create, update, and delete tasks, helping them stay organized.",
     tech_stack: ["ReactJs"],
     github_url: "https://github.com/faizyi/react-todoapp",
     demo_url: "https://faizyi.github.io/react-todoapp/",
