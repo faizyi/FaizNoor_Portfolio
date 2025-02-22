@@ -8,8 +8,14 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+    @media screen and (max-width: 768px) {
+    background: white; /* Ensures visibility on mobile */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0.5rem calc((100vw - 1000px) / 2);
+  position: fixed; /* Make it fixed */
+  top: 0;
+  width: 100%;
+  }
 `;
 
 export const NavLink = styled(ScrollLink)`

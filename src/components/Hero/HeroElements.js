@@ -7,6 +7,7 @@ export const HeroContainer = styled.div`
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;
+  margin-top: 5rem; 
   margin-left: auto;
   display: flex;
   flex-direction: column;
