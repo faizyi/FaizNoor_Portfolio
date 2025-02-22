@@ -1,10 +1,14 @@
 import React from "react";
-import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from "./HeaderElements";
+import { Nav, NavMenu, NavLink, NavBtn, NavRight, Bars } from "./HeaderElements";
+
 const Header = ({ toggle }) => {
   return (
-    <div className="Container" style={{padding: 0}}>
+    <div className="Container">
       <Nav>
-        <Logo to="/">
+        {/* Mobile: Show "Faiz Noor" */}
+        <NavRight>Faiz Noor</NavRight>
+
+        {/* Desktop: Show Navigation Links */}
         <NavMenu>
           <NavLink className="menu-item" to="projects">
             Projects
@@ -16,8 +20,8 @@ const Header = ({ toggle }) => {
             Contact
           </NavLink>
         </NavMenu>
-        </Logo>
 
+        {/* Resume Button (Hidden in mobile) */}
         <NavBtn>
           <a
             className="btn PrimaryBtn"
@@ -28,6 +32,8 @@ const Header = ({ toggle }) => {
             Resume
           </a>
         </NavBtn>
+
+        {/* Mobile Hamburger Icon */}
         <Bars onClick={toggle} />
       </Nav>
     </div>

@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
 `;
 
 export const NavLink = styled(ScrollLink)`
@@ -22,6 +23,18 @@ export const NavLink = styled(ScrollLink)`
     color: #f6f6f6;
   }
 `;
+
+export const NavRight = styled.div`
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  margin-left: 1rem;
+  
+  @media screen and (min-width: 769px) {
+    display: none; /* Hide in desktop */
+  }
+`;
+
 export const Logo = styled('div')`
   img {
     width: 47px;
@@ -31,9 +44,10 @@ export const Logo = styled('div')`
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: #fff;
+  color: black;
   font-size: 1.8rem;
   cursor: pointer;
+  margin-right: 1rem;
   @media screen and (max-width: 768px) {
     display: block;
   }

@@ -57,7 +57,6 @@ export const NavBtn = styled.div`
 `;
 
 function Dropdown({ isOpen, toggle }) {
-  // Use effect to manage the scroll behavior
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"; // Disable scrolling
@@ -65,7 +64,6 @@ function Dropdown({ isOpen, toggle }) {
       document.body.style.overflow = ""; // Enable scrolling
     }
 
-    // Cleanup to reset overflow style when the component unmounts
     return () => {
       document.body.style.overflow = "";
     };

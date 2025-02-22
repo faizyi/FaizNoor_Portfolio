@@ -190,5 +190,8 @@ video {
 @media (max-width: 1000px) {
   .Container {
     padding: 0;
+    margin: 0;
+    background-color: #fff;
+    width: 100%;
   }
 }
