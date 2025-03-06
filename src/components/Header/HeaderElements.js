@@ -1,17 +1,16 @@
-import { FaBars } from "react-icons/fa";
+import { HiMenuAlt4 } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll";
 import styled from "@emotion/styled";
 
 export const Nav = styled.nav`
   background: transparent;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
     @media screen and (max-width: 768px) {
-    background: white; /* Ensures visibility on mobile */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #151418; /* Ensures visibility on mobile */
         z-index: 10;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   position: fixed; /* Make it fixed */
@@ -35,7 +34,7 @@ export const NavLink = styled(ScrollLink)`
 export const NavRight = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
-  color: black;
+  color: rgb(119, 119, 121);
   margin-left: 1rem;
   
   @media screen and (min-width: 769px) {
@@ -50,9 +49,9 @@ export const Logo = styled('div')`
   }
 `;
 
-export const Bars = styled(FaBars)`
+export const Bars = styled(HiMenuAlt4)`
   display: none;
-  color: black;
+  color: rgb(119, 119, 121);
   font-size: 1.8rem;
   cursor: pointer;
   margin-right: 1rem;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaTimes } from "react-icons/fa";
+import { IoIosClose } from "react-icons/io";
 import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -19,7 +19,7 @@ const SiderBar = styled.div`
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
-const CloseIcon = styled(FaTimes)`
+const CloseIcon = styled(IoIosClose)`
   font-size: 2rem;
   color: #fff;
   position: absolute;
