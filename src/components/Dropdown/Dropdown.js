@@ -4,7 +4,8 @@ import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
 
 const SiderBar = styled.div`
-  background: #F8F8F8;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
   position: fixed;
   height: 100%;
   width: 100%;

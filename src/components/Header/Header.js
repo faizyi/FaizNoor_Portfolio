@@ -6,21 +6,21 @@ const Header = ({ toggle }) => {
     <div className="Container">
       <Nav>
         <div className="NavLeft">
-        {/* Mobile: Show "Faiz Noor" */}
-        <NavRight>Faiz Noor</NavRight>
+          {/* Mobile: Show "Faiz Noor" */}
+          <NavRight>Faiz Noor</NavRight>
 
-        {/* Desktop: Show Navigation Links */}
-        <NavMenu>
-          <NavLink className="menu-item" to="projects">
-            Projects
-          </NavLink>
-          <NavLink className="menu-item" to="about">
-            About
-          </NavLink>
-          <NavLink className="menu-item" to="contact">
-            Contact
-          </NavLink>
-        </NavMenu>
+          {/* Desktop: Show Navigation Links */}
+          <NavMenu>
+            <NavLink className="menu-item" to="projects">
+              Projects
+            </NavLink>
+            <NavLink className="menu-item" to="about">
+              About
+            </NavLink>
+            <NavLink className="menu-item" to="contact">
+              Contact
+            </NavLink>
+          </NavMenu>
         </div>
 
         {/* Resume Button (Hidden in mobile) */}

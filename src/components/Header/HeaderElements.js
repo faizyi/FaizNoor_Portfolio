@@ -3,30 +3,26 @@ import { Link as ScrollLink } from "react-scroll";
 import styled from "@emotion/styled";
 
 export const Nav = styled.nav`
-  background: transparent;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
-  //   position: fixed; /* Make it fixed */
-  // top: 0;
-  // width: 80%;
-  // padding-right: 3.5rem;
-  // margin-right: auto;
-  // margin-left: auto;
-    @media screen and (max-width: 768px) {
-    background: white; /* Ensures visibility on mobile */
-        z-index: 10;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  position: fixed; /* Make it fixed */
+  position: fixed; /* Fixed at the top */
   top: 0;
+  left: 0;
   width: 100%;
+  z-index: 10;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+
+  @media screen and (max-width: 768px) {
+    background: rgba(255, 255, 255, 0.9); /* Slightly higher opacity for better visibility */
   }
 `;
 
 export const NavLink = styled(ScrollLink)`
-  color: #706F6B;
+  color: #706f6b;
   display: flex;
   font-size: 1.2rem;
   align-items: center;
@@ -40,15 +36,11 @@ export const NavLink = styled(ScrollLink)`
 export const NavRight = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
-  color: #34322D;
+  color: #34322d;
   margin-left: 1rem;
-  
-  // @media screen and (min-width: 769px) {
-  //   display: none; /* Hide in desktop */
-  // }
 `;
 
-export const Logo = styled('div')`
+export const Logo = styled("div")`
   img {
     width: 47px;
     height: 47px;
@@ -74,6 +66,7 @@ export const NavMenu = styled.div`
   .menu-item + .menu-item {
     margin-left: 1rem;
   }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
