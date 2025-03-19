@@ -42,7 +42,7 @@ function Footer() {
       <div>
       <p>
         Designed & Developed by{" "}
-        <a href="https://github.com/FaizNoor" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/faizyi" target="_blank" rel="noopener noreferrer">
           Faiz Noor
         </a>
       </p>
