@@ -26,7 +26,7 @@ export const Card = styled.div`
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -77,7 +77,6 @@ export const ImageWrapper = styled.div`
   padding: 1rem;
   background-color: #FAFAFA;;
   border-radius: 0 0 12px 12px; /* Rounded bottom */
-  box-shadow: 20px 20px 40px rgb(0, 0, 0);
 
   img {
     height: 150px;
