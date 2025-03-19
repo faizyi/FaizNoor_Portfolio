@@ -12,10 +12,10 @@ const StyledIconButton = styled(IconButton)`
 `
 
 const StyledArrowIcon = styled(MdKeyboardArrowUp)`
-    background-color: #007bff;
+    background: #1A1A19;
+    color: #f6f6f6;
     border-radius: 50%;
     padding: 5px;
-    box-shadow: 0px 4px 20px rgba(160, 170, 180, 0.6);
 `
 
 function ScrollToTop() {
@@ -38,7 +38,8 @@ function ScrollToTop() {
 
     return (
         shouldRender &&
-        <Tooltip title='Scroll to top' placement='top' open={open} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
+        <Tooltip title='Scroll to top' placement='top' open={open} onOpen={() => setOpen(true)} 
+        onClose={() => setOpen(false)}>
             <StyledIconButton size='large' aria-label='scroll to top' onClick={handleClick} >
                 <StyledArrowIcon fontSize={40} />
             </StyledIconButton>

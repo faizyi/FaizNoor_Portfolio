@@ -9,6 +9,7 @@ import ScrollToTop from "../components/SocialIcon/ScrollToTop";
 function Home() {
   return (
     <>
+    <div className="">
       <Hero />
       <Projects />
       <About />
@@ -16,6 +17,7 @@ function Home() {
       <FixSocialIcon />
       <Footer />
       <ScrollToTop />
+      </div>
     </>
   );
 }

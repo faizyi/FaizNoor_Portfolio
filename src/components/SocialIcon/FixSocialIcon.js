@@ -17,12 +17,22 @@ const SocialContainer = styled.div`
     margin-top: 1rem;
   }
 
-  a {
+  .linkedin {
     font-size: 2.3rem;
     color: rgb(119, 119, 121);
     &:hover {
       color: rgb(57, 134, 250);
     }
+  }
+
+  .github {
+        font-size: 2.3rem;
+    color: rgb(119, 119, 121);
+    &:hover {
+      color: #000000;
+    }
+  }
+
   }
 
   @media screen and (max-width: 1000px) {
@@ -58,6 +68,7 @@ function FixSocialIcon() {
         <ul>
           <li className="item">
             <a
+            className="linkedin"
               href="https://www.linkedin.com/in/faiz-noor"
               target="_blank"
               rel="noopener noreferrer"
@@ -67,6 +78,7 @@ function FixSocialIcon() {
           </li>
           <li className="item">
             <a
+            className="github"
               href="https://github.com/faizyi"
               target="_blank"
               rel="noopener noreferrer"

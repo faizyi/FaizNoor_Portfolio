@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
 export const ContactWrapper = styled.div`
-  margin-top: 5rem;
+  background-color: #FAFAFA;
+  padding-top: 3rem;
 `;
 
 export const Image = styled.img`
@@ -9,14 +10,14 @@ export const Image = styled.img`
   height: 150px; /* Ensure width and height are equal */
   border-radius: 50%; /* Make the image round */
   object-fit: cover; /* Ensures the image fits nicely within the circle */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add some depth with shadow */
+  // box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add some depth with shadow */
   margin: 0 auto;
   margin-bottom: 1.5rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
 
   &:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
   }
 `;
 

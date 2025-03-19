@@ -10,7 +10,7 @@ function Projects() {
   return (
     <>
        <div className="ProjectWrapper" id="projects">
-      <div className="Container">
+      <div className="Container" >
         <h2 className="SectionTitle">Projects</h2>
         <p className="SectionDescription">
           Learn how different projects handle real-world tasks through step-by-step implementations.
