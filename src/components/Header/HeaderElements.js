@@ -9,8 +9,14 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  //   position: fixed; /* Make it fixed */
+  // top: 0;
+  // width: 80%;
+  // padding-right: 3.5rem;
+  // margin-right: auto;
+  // margin-left: auto;
     @media screen and (max-width: 768px) {
-    background: #151418; /* Ensures visibility on mobile */
+    background: white; /* Ensures visibility on mobile */
         z-index: 10;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   position: fixed; /* Make it fixed */
@@ -20,26 +26,26 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled(ScrollLink)`
-  color: rgb(119, 119, 121);
+  color: #706F6B;
   display: flex;
   font-size: 1.2rem;
   align-items: center;
   height: 100%;
   cursor: pointer;
   &:hover {
-    color: #f6f6f6;
+    color: rgb(169, 169, 172);
   }
 `;
 
 export const NavRight = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
-  color: rgb(119, 119, 121);
+  color: #34322D;
   margin-left: 1rem;
   
-  @media screen and (min-width: 769px) {
-    display: none; /* Hide in desktop */
-  }
+  // @media screen and (min-width: 769px) {
+  //   display: none; /* Hide in desktop */
+  // }
 `;
 
 export const Logo = styled('div')`

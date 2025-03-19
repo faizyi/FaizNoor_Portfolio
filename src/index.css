@@ -8,19 +8,25 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: ui-serif, LibreBaskerville, Georgia, Cambria, Times New Roman, Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fafaff;
+  background: #FDFDFD;
   font-weight: 400;
   overflow-x: hidden;
 }
 
+/* Header */
+.NavLeft{
+  display: flex;
+  gap: 1.5rem;
+}
+
 main {
-  background: #151418;
-  background-image: url('../public/blob-haikei.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #FEFEFE;
+  /* background-image: url('../public/blob-haikei.svg'); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   width: 100%;
 }
 
@@ -87,7 +93,7 @@ video {
 .PrimaryBtn {
   padding: 12px 20px;
   border: none;
-  background: rgb(57, 134, 250);
+  background: #1A1A19;
   color: #f6f6f6;
 }
 
@@ -99,7 +105,7 @@ video {
 }
 
 .PrimaryBtn:hover {
-  background: rgb(18, 111, 250);
+  color: #dad7d7;;
 }
 
 .SecondaryBtn:hover {
@@ -109,8 +115,8 @@ video {
 
 .Container {
   max-width: 1000px;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  /* padding-right: 1rem;
+  padding-left: -1rem; */
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -151,21 +157,15 @@ video {
 
 .SectionTitle {
   font-size: 28px;
-  color: #151418;
+  /* color: #cf0d0d; */
   font-weight: 700;
   margin-bottom: 3.5rem;
 }
-.ProjectWrapper {
-  margin-top: -1rem;
-}
 
-.ProjectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 1fr; /* Ensures all rows maintain equal height */
-  gap: 2rem;
-  padding: 1rem;
-  background: #f9f9f9;
+.ProjectWrapper {
+  background-color: #FAFAFA;
+  margin-top: 4rem;
+  text-align: center;
 }
 
 
@@ -173,7 +173,13 @@ video {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #000000;
+}
+
+.SectionDescription {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
 }
 
 .SectionSubtitle {

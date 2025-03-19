@@ -5,6 +5,7 @@ const Header = ({ toggle }) => {
   return (
     <div className="Container">
       <Nav>
+        <div className="NavLeft">
         {/* Mobile: Show "Faiz Noor" */}
         <NavRight>Faiz Noor</NavRight>
 
@@ -20,6 +21,7 @@ const Header = ({ toggle }) => {
             Contact
           </NavLink>
         </NavMenu>
+        </div>
 
         {/* Resume Button (Hidden in mobile) */}
         <NavBtn>

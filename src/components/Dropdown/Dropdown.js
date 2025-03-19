@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
 
 const SiderBar = styled.div`
-  background: #151418;
+  background: #F8F8F8;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -21,11 +21,12 @@ const SiderBar = styled.div`
 
 const CloseIcon = styled(IoIosClose)`
   font-size: 2rem;
-  color: #fff;
+  color: #000000;
   position: absolute;
   right: 2rem;
   top: 2rem;
   cursor: pointer;
+  
 `;
 
 export const NavMenu = styled.div`
@@ -40,12 +41,12 @@ export const NavMenu = styled.div`
 `;
 
 export const NavLink = styled(ScrollLink)`
-  color: #fff;
+  color: #706F6B;
   cursor: pointer;
   font-size: 1.7rem;
 
   &:hover {
-    color: rgb(119, 119, 121);
+    color: rgb(169, 169, 172);
   }
 `;
 

@@ -8,6 +8,7 @@ export const ProjectList = [
     tech_stack: ["NextJs", "TailwindCSS", "NodeJs", "MongoDB"],
     github_url: "https://github.com/faizyi/MERN-Chat",
     demo_url: "https://mern-chat-gamma.vercel.app/",
+    category: "web",
   },
   {
     img: "/weather.png",
@@ -17,6 +18,7 @@ export const ProjectList = [
     tech_stack: ["React"],
     github_url: "https://github.com/faizyi/react-weather-app",
     demo_url: "https://faizyi.github.io/react-weather-app/",
+    category: "web",
   },
   {
     img: "/e-commerce-1.png",
@@ -26,6 +28,7 @@ export const ProjectList = [
     tech_stack: ["NextJs", "TailwindCSS", "NodeJs", "MongoDB"],
     github_url: "https://github.com/faizyi/SAK-Shop-Ecommerce",
     demo_url: "https://sak-shop-ecommerce.vercel.app/",
+    category: "web",
   },
   {
     img: "/ems.png",
@@ -35,6 +38,7 @@ export const ProjectList = [
     tech_stack: ["ReactJs", "Firebase"],
     github_url: "https://github.com/faizyi/React-EMS",
     demo_url: "https://faizyi.github.io/React-EMS/",
+    category: "web",
   },
   {
     img: "/todo.png",
@@ -44,6 +48,7 @@ export const ProjectList = [
     tech_stack: ["ReactJs"],
     github_url: "https://github.com/faizyi/react-todoapp",
     demo_url: "https://faizyi.github.io/react-todoapp/",
+    category: "web",
   },
 ];
 

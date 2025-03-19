@@ -28,9 +28,17 @@ function Hero() {
       <Header toggle={toggle} />
       <HeroContainer>
         <HeroWrapper>
+        <HeroRight>
+            <ScrollAnimation animateIn="fadeIn">
+              <StyledImage
+                src="/faiz.png"
+                alt="faiz.png"
+              />
+            </ScrollAnimation>
+          </HeroRight>
           <HeroLeft>
-            <ScrollAnimation animateIn="fadeIn" >
-              <TypeAnimation
+            <div>
+            <TypeAnimation
                 cursor={false}
                 sequence={[
                   'Hi, I\'m Faiz Noor.',
@@ -40,6 +48,7 @@ function Hero() {
                 wrapper="h1"
                 repeat={0}
               />
+               {/* <ScrollAnimation animateIn="fadeIn" > */}
               {showSubtitle &&
                 <TypeAnimation
                   cursor={true}
@@ -82,28 +91,21 @@ function Hero() {
                   repeat={Infinity}
                 />
               }
-            </ScrollAnimation>
+            {/* </ScrollAnimation> */}
+            </div>
+
 
           </HeroLeft>
-          <HeroRight>
-            <ScrollAnimation animateIn="fadeIn">
-              <StyledImage
-                src="/faiz.png"
-                alt="faiz.png"
-                // width={900}
-                // height={800}
-              />
-            </ScrollAnimation>
-          </HeroRight>
+
         </HeroWrapper>
         {showScrollDown &&<ScrollAnimation animateIn="flipInX" offset={0}>
         <ScrollDown to="projects" id="scrollDown">
           <ScrollLink>
             Scroll down
-            <img
-              src="/scroll-down.svg"
+            {/* <Image
+              src="/scroll-down.png"
               alt="scroll-down"
-            />
+            /> */}
           </ScrollLink>
         </ScrollDown>
         </ScrollAnimation>}

@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import { ProjectList } from "../../../data/ProjectData";
+// import { ProjectList } from "../../../data/ProjectData";
 import {
   Card,
   ImageWrapper,
@@ -8,12 +8,13 @@ import {
   TechCardContainer,
   TechCard,
   BtnGroup,
+  ProjectsGrid
 } from "./ProjectCardElements";
 
-function ProjectCard() {
+function ProjectCard({ project }) {
   return (
-    <div className="ProjectsGrid">
-      {ProjectList.map((list, index) => (
+    <ProjectsGrid>
+      {project.map((list, index) => (
         <ScrollAnimation
           animateIn="fadeInUp"
           // animateOnce={true}
@@ -56,9 +57,10 @@ function ProjectCard() {
               </BtnGroup>
             </CardContent>
           </Card>
+
         </ScrollAnimation>
       ))}
-    </div>
+    </ProjectsGrid>
   );
 }
 
