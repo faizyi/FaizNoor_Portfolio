@@ -55,11 +55,11 @@ function ProjectCard({ project }) {
               </BtnGroup>
             </CardContent>
           </Card>
-
         </ScrollAnimation>
       ))}
     </ProjectsGrid>
   );
 }
+
 
 export default ProjectCard;

@@ -142,16 +142,23 @@ export const FilterButtons = styled.div`
   margin-bottom: 2rem;
 
   .FilterBtn {
-  padding: 12px 40px;
-  border: #D2D2D1 1px solid;
-  background: #FCFCFC;
-  color: #1A1A19;
-  border-radius: 100px;
-  cursor: pointer;
+    padding: 12px 40px;
+    border: #D2D2D1 1px solid;
+    background: #FCFCFC;
+    color: #1A1A19;
+    border-radius: 100px;
+    cursor: pointer;
     transition: all 0.3s ease;
+    
+    &:hover {
+      background: #EFEFEE;
+    }
 
-  &:hover {
-   background: #EFEFEE;
+    /* Add the active state styles */
+    &.active {
+      background-color: black;
+      color: white;
+    }
   }
-  
 `
+
