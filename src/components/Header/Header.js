@@ -7,7 +7,7 @@ const Header = ({ toggle }) => {
       <Nav>
         <div className="NavLeft">
           {/* Mobile: Show "Faiz Noor" */}
-          <NavRight>Faiz Noor</NavRight>
+          <NavRight className="menu-item" to="home">Faiz Noor</NavRight>
 
           {/* Desktop: Show Navigation Links */}
           <NavMenu>
@@ -16,6 +16,9 @@ const Header = ({ toggle }) => {
             </NavLink>
             <NavLink className="menu-item" to="about">
               About
+            </NavLink>
+            <NavLink className="menu-item" to="skills">
+              Skills
             </NavLink>
             <NavLink className="menu-item" to="contact">
               Contact

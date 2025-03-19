@@ -71,7 +71,7 @@ const MobileFooterSocial = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    // margin-top: 1.5rem;
+    margin-top: 1.5rem;
 
     .linkedin, .github {
       font-size: 2.5rem;

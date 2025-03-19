@@ -1,6 +1,5 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-// import { ProjectList } from "../../../data/ProjectData";
 import {
   Card,
   ImageWrapper,
@@ -15,14 +14,8 @@ function ProjectCard({ project }) {
   return (
     <ProjectsGrid>
       {project.map((list, index) => (
-        <ScrollAnimation
-          animateIn="fadeIn"
-          key={index}
-        >
+        <ScrollAnimation animateIn="fadeIn" key={index}>
           <Card>
-            <ImageWrapper>
-              <img src={list.img} alt={list.name} />
-            </ImageWrapper>
             <CardContent>
               <h4>{list.title}</h4>
               <p>{list.description}</p>
@@ -54,12 +47,16 @@ function ProjectCard({ project }) {
                 )}
               </BtnGroup>
             </CardContent>
+
+            <ImageWrapper>
+              <img src={list.img} alt={list.name} />
+              <div className="image-shadow" />
+            </ImageWrapper>
           </Card>
         </ScrollAnimation>
       ))}
     </ProjectsGrid>
   );
 }
-
 
 export default ProjectCard;

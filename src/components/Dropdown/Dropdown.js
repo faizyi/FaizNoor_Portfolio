@@ -54,7 +54,7 @@ export const NavLink = styled(ScrollLink)`
 export const NavBtn = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 1.7rem;
 `;
 
@@ -80,6 +80,9 @@ function Dropdown({ isOpen, toggle }) {
         </NavLink>
         <NavLink onClick={toggle} className="menu-item" to="about">
           About
+        </NavLink>
+        <NavLink onClick={toggle} className="menu-item" to="skills">
+          Skills
         </NavLink>
         <NavLink onClick={toggle} className="menu-item" to="contact">
           Contact

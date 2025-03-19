@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const AboutWrapper = styled.div`
   background-color: #FAFAFA;
-  padding: 3rem 0;
+  padding: 1rem;
   text-align: center;
 `;
 

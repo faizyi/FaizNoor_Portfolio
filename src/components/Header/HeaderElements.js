@@ -33,11 +33,12 @@ export const NavLink = styled(ScrollLink)`
   }
 `;
 
-export const NavRight = styled.div`
+export const NavRight = styled(ScrollLink)`
   font-size: 1.5rem;
   font-weight: 600;
   color: #34322d;
   margin-left: 1rem;
+  cursor: pointer;
 `;
 
 export const Logo = styled("div")`
