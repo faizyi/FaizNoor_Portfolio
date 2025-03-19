@@ -16,9 +16,7 @@ function ProjectCard({ project }) {
     <ProjectsGrid>
       {project.map((list, index) => (
         <ScrollAnimation
-          animateIn="fadeInUp"
-          // animateOnce={true}
-          // delay={index * 100}
+          animateIn="fadeIn"
           key={index}
         >
           <Card>
@@ -41,7 +39,7 @@ function ProjectCard({ project }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Code
+                    Code
                   </a>
                 )}
                 {list.demo_url.length > 0 && (
@@ -51,7 +49,7 @@ function ProjectCard({ project }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Live Demo
+                    Preview
                   </a>
                 )}
               </BtnGroup>

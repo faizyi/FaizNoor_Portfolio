@@ -6,6 +6,7 @@ display: grid;
   grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards in a row */
   gap: 2rem;
   padding: 1rem;
+  
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
@@ -18,16 +19,16 @@ display: grid;
 
 export const Card = styled.div`
   background: #FAFAFA;
+  padding: 0.5rem;
+  border: #D2D2D1 1px solid;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: hidden; /* Ensures content stays within the card */
+  height: 400px; /* Set uniform card height */
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  // &:hover {
-  //  transform: translateY(-10px);
-  // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  // }
 `;
+
 
 
 export const ImageWrapper = styled.div`
@@ -38,16 +39,29 @@ export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-    // &:hover {
-    //   transform: scale(1.1);
-    // }
+  border-radius: 10px;
   }
 `;
 
 export const CardContent = styled.div`
   padding: 1.5rem;
   text-align: center;
+  height: 250px; /* Set a fixed height for uniformity */
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    overflow-y: auto; /* Show scrollbar on hover */
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
 
   h4 {
     font-size: 1.8rem;
@@ -61,9 +75,9 @@ export const CardContent = styled.div`
     font-size: 1rem;
     color: #4b5563;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
   }
 `;
+
 
 
 export const TechCardContainer = styled.div`
@@ -71,7 +85,7 @@ export const TechCardContainer = styled.div`
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 `;
 
 export const TechCard = styled.div`
@@ -84,7 +98,8 @@ export const TechCard = styled.div`
 export const BtnGroup = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
 
   a {
     padding: 0.9rem 1.8rem;
@@ -95,24 +110,26 @@ export const BtnGroup = styled.div`
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &.PrimaryBtn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+   padding: 12px 20px;
+  border-radius: 100px;
   text-decoration: none;
-  font-weight: bold;
 
       &:hover {
-        box-shadow: 0 10px 25px rgba(101, 52, 255, 0.4);
+        color: #dad7d7;;
       }
     }
 
     &.SecondaryBtn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 12px 20px;
+  border: #D2D2D1 1px solid;
+  background: #FCFCFC;
+  color: #1A1A19;
+  border-radius: 100px;
+  cursor: pointer;
+    transition: all 0.3s ease;
 
       &:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+         background: #EFEFEE;
       }
     }
   }
