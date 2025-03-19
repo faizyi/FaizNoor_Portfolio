@@ -5,10 +5,11 @@ export const HeroContainer = styled.div`
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;
-  margin-top: 4rem; 
+  margin-top: 3rem; 
   margin-left: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (max-width: 768px) {
     max-width: 540px;
@@ -28,6 +29,7 @@ export const HeroContainer = styled.div`
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center content */
 
   @media screen and (max-width: 992px) {
     flex-direction: column;
@@ -36,8 +38,10 @@ export const HeroWrapper = styled.div`
 
 export const HeroLeft = styled.div`
   display: flex;
-  justify-content: center;
-  // background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
   border-radius: 15px;
 
   h1 {
@@ -50,7 +54,7 @@ export const HeroLeft = styled.div`
   h5 {
     font-size: 1.6rem;
     color: rgb(119, 119, 121);
-    margin-bottom: 1rem;
+    margin-top: 0.5rem; /* Add spacing between name and subtitle */
     font-weight: 400;
   }
 
@@ -64,9 +68,6 @@ export const HeroLeft = styled.div`
     text-align: center;
     align-items: center;
     margin-bottom: 2rem;
-
-    h5 {
-      min-height: 5rem;
   }
 `;
 
@@ -100,7 +101,7 @@ export const ScrollDown = styled(LinkScroll)`
   display: flex;
   justify-content: center;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   animation: ${ScrollAnimation} 2s linear 0s infinite;
   @media screen and (max-width: 992px) {
@@ -122,3 +123,22 @@ export const ScrollLink = styled.div`
     margin-left: 6px;
   }
 `;
+
+/* Name remains fixed, Subtitle appears below */
+export const NameWrapper = styled.div`
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #000;
+`;
+
+export const SubtitleWrapper = styled.div`
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgb(119, 119, 121);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+

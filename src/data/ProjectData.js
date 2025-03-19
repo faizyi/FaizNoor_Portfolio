@@ -124,19 +124,19 @@ export const stackList = [
     name: "Material UI",
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg",
-    name: "TailwindCSS",
-  },
-  {
     img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.0.0/antdesign.svg",
     name: "Ant Design",
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
-    name: "Figma",
-  },
-  {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
     name: "VS Code",
+  },
+  {
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
+    name: "TailwindCSS",
+  },
+  {
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg",
+    name: "GraphQL",
   },
 ];

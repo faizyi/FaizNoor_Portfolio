@@ -95,7 +95,6 @@ export const StyledImage = styled.img`
   object-fit: cover; /* Ensures the image fits nicely within the circle */
   border: 5px solidrgb(41, 38, 38); /* Add a nice border */
   transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-
   &:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */

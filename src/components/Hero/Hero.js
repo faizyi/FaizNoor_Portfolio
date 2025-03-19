@@ -6,9 +6,10 @@ import {
   HeroWrapper,
   HeroLeft,
   HeroRight,
-  Image,
   ScrollDown,
   ScrollLink,
+  NameWrapper,  // Added for positioning
+  SubtitleWrapper, // Added for absolute positioning
 } from "./HeroElements";
 import { TypeAnimation } from 'react-type-animation';
 import ScrollAnimation from "react-animate-on-scroll";
@@ -22,41 +23,41 @@ function Hero() {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <main>
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Header toggle={toggle} />
       <HeroContainer>
         <HeroWrapper>
-        <HeroRight>
+          <HeroRight>
             <ScrollAnimation animateIn="fadeIn">
-              <StyledImage
-                src="/faiz.png"
-                alt="faiz.png"
-              />
+              <StyledImage src="/faiz.png" alt="faiz.png" />
             </ScrollAnimation>
           </HeroRight>
           <HeroLeft>
-            <div>
-            <TypeAnimation
+            <NameWrapper>
+              {/* Name Animation */}
+              <TypeAnimation
                 cursor={false}
                 sequence={[
                   'Hi, I\'m Faiz Noor.',
-                  () => setShowSubtitle(true)
+                  () => setShowSubtitle(true),
                 ]}
                 speed={{ type: "keyStrokeDelayInMs", value: 150 }}
                 wrapper="h1"
                 repeat={0}
               />
-               {/* <ScrollAnimation animateIn="fadeIn" > */}
-              {showSubtitle &&
+            </NameWrapper>
+
+            {/* Subtitle should not move the name */}
+            <SubtitleWrapper>
+              {showSubtitle && (
                 <TypeAnimation
                   cursor={true}
                   sequence={[
                     500,
-                    'A Web and.',
-                    500,
-                    'A Mobile Developer.',
+                    'A Web and Mobile Developer.',
                     1000,
                     'A problem solver.',
                     1000,
@@ -90,25 +91,19 @@ function Hero() {
                   wrapper="h5"
                   repeat={Infinity}
                 />
-              }
-            {/* </ScrollAnimation> */}
-            </div>
-
-
+              )}
+            </SubtitleWrapper>
           </HeroLeft>
-
         </HeroWrapper>
-        {showScrollDown &&<ScrollAnimation animateIn="flipInX" offset={0}>
-        <ScrollDown to="projects" id="scrollDown">
-          <ScrollLink>
-            Scroll down
-            {/* <Image
-              src="/scroll-down.png"
-              alt="scroll-down"
-            /> */}
-          </ScrollLink>
-        </ScrollDown>
-        </ScrollAnimation>}
+
+        {/* Scroll Down Animation */}
+        {showScrollDown && (
+          <ScrollAnimation animateIn="flipInX" offset={0}>
+            <ScrollDown to="projects" id="scrollDown">
+              <ScrollLink>Scroll down</ScrollLink>
+            </ScrollDown>
+          </ScrollAnimation>
+        )}
       </HeroContainer>
     </main>
   );
