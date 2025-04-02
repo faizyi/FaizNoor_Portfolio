@@ -1,6 +1,17 @@
 // --------------------------------------- Project List
 export const ProjectList = [
   {
+    img: "/blog.png",
+    title: "Blog - InsightSphere",
+    description:
+      "A responsive blog application built using MERN stack technologies, with features like user authentication, create blog using AI, commenting, blog management, and a dynamic user interface.",
+    tech_stack: ["React", "Shadcn UI", "TailwindCSS", "NodeJs", 
+      "Gemini AI", "Clodinary",  "MongoDB"],
+    github_url: "https://github.com/faizyi/mern-blog-web-front",
+    demo_url: "https://mern-blog-web-front.vercel.app/",
+    category: "web",
+  },
+  {
     img: "/chat.png",
     title: "Chat",
     description:

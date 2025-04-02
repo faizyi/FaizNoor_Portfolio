@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { Link as LinkScroll } from "react-scroll";
 
 export const HeroContainer = styled.div`
+// background-color: #ad4040;
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;
